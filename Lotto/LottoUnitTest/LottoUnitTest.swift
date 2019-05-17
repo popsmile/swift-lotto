@@ -18,10 +18,15 @@ class LottoUnitTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testBuyOneLottoWithOneThousandWon() {
-        let extractedExpr = Lotto(money: 8000)
-        let numberOfLotto = extractedExpr.count
+    func testBuy8LottoWith8000Won() {
+        let numberOfLotto = Lotto(money: 8000).count
         XCTAssertEqual(numberOfLotto, 8)
     }
 
+    func testBuy8LottoWith8500Won() {
+        let numberOfLotto = Lotto(money: 8500).count
+        XCTAssertEqual(numberOfLotto, 8)
+    }
+    
+    
 }
