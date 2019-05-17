@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B6FF608228E528900C872B2 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FF607228E528900C872B2 /* Lotto.swift */; };
+		9B6FF609228E528900C872B2 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6FF607228E528900C872B2 /* Lotto.swift */; };
 		9BF61D3E228E48C600F6117E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF61D3D228E48C600F6117E /* main.swift */; };
 		9BF61D4B228E48F500F6117E /* LottoUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF61D4A228E48F500F6117E /* LottoUnitTest.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B6FF607228E528900C872B2 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
 		9BF61D3A228E48C600F6117E /* Lotto */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lotto; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF61D3D228E48C600F6117E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9BF61D48228E48F500F6117E /* LottoUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LottoUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				9BF61D3D228E48C600F6117E /* main.swift */,
+				9B6FF607228E528900C872B2 /* Lotto.swift */,
 			);
 			path = Lotto;
 			sourceTree = "<group>";
@@ -172,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6FF608228E528900C872B2 /* Lotto.swift in Sources */,
 				9BF61D3E228E48C600F6117E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B6FF609228E528900C872B2 /* Lotto.swift in Sources */,
 				9BF61D4B228E48F500F6117E /* LottoUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
