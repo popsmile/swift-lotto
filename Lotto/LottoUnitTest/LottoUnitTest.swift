@@ -20,12 +20,12 @@ class LottoUnitTest: XCTestCase {
 
     func testBuy8LottoWith8000Won() {
         let lotto = Lotto(money: 8000)
-        XCTAssertEqual(lotto.count, 8)
+        XCTAssertEqual(lotto.tickets.count, 8)
     }
 
     func testBuy8LottoWith8500Won() {
         let lotto = Lotto(money: 8500)
-        XCTAssertEqual(lotto.count, 8)
+        XCTAssertEqual(lotto.tickets.count, 8)
     }
     
     func testGenerateLottoNumber() {
@@ -33,4 +33,11 @@ class LottoUnitTest: XCTestCase {
         XCTAssertEqual(lotto.tickets.count, 1)
     }
     
+    func testNumbersNotOverlap() {
+        let ticket = Lotto(money: 1000).tickets.first!
+        var numbersInTicket: Set<Int> = []
+        ticket.forEach { numbersInTicket.insert($0) }
+        XCTAssertEqual(numbersInTicket.count, 6)
+    }
+
 }

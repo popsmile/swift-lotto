@@ -8,17 +8,18 @@
 
 import Foundation
 
+typealias Ticket = [Int]
+
 class Lotto {
-    let count: Int
-    var tickets: [[Int]] = []
+    let tickets: [Ticket]
     
     init(money: Int) {
-        self.count = money / 1000
-        
-        for _ in 0..<count {
-            let ticket = Array.init(repeating: 0, count: 6)
-            self.tickets.append(ticket)
+        var tickets: [[Int]] = []
+        for _ in 0..<(money/1000) {
+            let ticket = [1, 2, 3, 4, 5, 6]
+            tickets.append(ticket)
         }
+        self.tickets = tickets
     }
 
 }
