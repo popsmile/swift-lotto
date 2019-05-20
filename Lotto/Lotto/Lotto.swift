@@ -10,8 +10,15 @@ import Foundation
 
 class Lotto {
     let count: Int
+    var tickets: [[Int]] = []
     
     init(money: Int) {
         self.count = money / 1000
+        
+        for _ in 0..<count {
+            let ticket = Array.init(repeating: 0, count: 6)
+            self.tickets.append(ticket)
+        }
     }
+
 }

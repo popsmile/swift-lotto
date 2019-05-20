@@ -19,14 +19,18 @@ class LottoUnitTest: XCTestCase {
     }
 
     func testBuy8LottoWith8000Won() {
-        let numberOfLotto = Lotto(money: 8000).count
-        XCTAssertEqual(numberOfLotto, 8)
+        let lotto = Lotto(money: 8000)
+        XCTAssertEqual(lotto.count, 8)
     }
 
     func testBuy8LottoWith8500Won() {
-        let numberOfLotto = Lotto(money: 8500).count
-        XCTAssertEqual(numberOfLotto, 8)
+        let lotto = Lotto(money: 8500)
+        XCTAssertEqual(lotto.count, 8)
     }
     
+    func testGenerateLottoNumber() {
+        let lotto = Lotto(money: 1000)
+        XCTAssertEqual(lotto.tickets.count, 1)
+    }
     
 }
