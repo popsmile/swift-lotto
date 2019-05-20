@@ -16,10 +16,23 @@ class Lotto {
     init(money: Int) {
         var tickets: [[Int]] = []
         for _ in 0..<(money/1000) {
-            let ticket = [1, 2, 3, 4, 5, 6]
+            let ticket = Lotto.makeTicket()
             tickets.append(ticket)
         }
         self.tickets = tickets
     }
 
+    private static func makeTicket() -> Ticket {
+        var numbers = Array(1...45)
+        var ticket: Ticket = []
+        
+        for _ in 0..<6 {
+            numbers = numbers.filter { !ticket.contains($0) }
+            numbers.shuffle()
+            let randomIndex = Int.random(in: 0..<numbers.count)
+            ticket.append(numbers[randomIndex])
+        }
+        
+        return ticket
+    }
 }
