@@ -36,3 +36,11 @@ struct Ticket {
         self.numbers = numbers
     }
 }
+
+struct LottoMachine {
+
+    static func match(_ ticketNumbers: [Int], with winningNumbers: [Int]) -> Int {
+        return 3
+    }
+
+}

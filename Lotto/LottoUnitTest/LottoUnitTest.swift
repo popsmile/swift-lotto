@@ -39,5 +39,11 @@ class LottoUnitTest: XCTestCase {
         ticket.numbers.forEach { numbersInTicket.insert($0) }
         XCTAssertEqual(numbersInTicket.count, 6)
     }
+    
+    func testMatchTicketNumbersWithWinningNumbers() {
+        let ticketNumbers = [1, 3, 5, 7, 9, 11]
+        let winningNumbers = [1, 2, 3, 4, 5, 6]
+        XCTAssertEqual(LottoMachine.match(ticketNumbers, with: winningNumbers), 3)
+    }
 
 }
