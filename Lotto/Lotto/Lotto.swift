@@ -18,22 +18,21 @@ struct Lotto {
         }
         self.tickets = tickets
     }
+}
 
-    struct Ticket {
-        private let count = 6
-        let numbers: [Int]
-        
-        init() {
-            var pool = Array(1...45)
-            var numbers = [Int]()
-            for _ in 0..<count {
-                pool = pool.filter { !numbers.contains($0) }
-                pool.shuffle()
-                let randomIndex = Int.random(in: 0..<pool.count)
-                numbers.append(pool[randomIndex])
-            }
-            self.numbers = numbers
+struct Ticket {
+    private let count = 6
+    let numbers: [Int]
+    
+    init() {
+        var pool = Array(1...45)
+        var numbers = [Int]()
+        for _ in 0..<count {
+            pool = pool.filter { !numbers.contains($0) }
+            pool.shuffle()
+            let randomIndex = Int.random(in: 0..<pool.count)
+            numbers.append(pool[randomIndex])
         }
+        self.numbers = numbers
     }
-
 }
