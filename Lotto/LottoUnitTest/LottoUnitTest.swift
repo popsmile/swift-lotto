@@ -35,9 +35,7 @@ class LottoUnitTest: XCTestCase {
     
     func testNumbersNotOverlap() {
         let ticket = Lotto(money: 1000).tickets.first!
-        var numbersInTicket: Set<Int> = []
-        ticket.numbers.forEach { numbersInTicket.insert($0) }
-        XCTAssertEqual(numbersInTicket.count, 6)
+        XCTAssertEqual(ticket.numbers.set.count, 6)
     }
     
     func testMatchTicketNumbersWithWinningNumbers() {

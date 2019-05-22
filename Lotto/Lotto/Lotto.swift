@@ -40,7 +40,14 @@ struct Ticket {
 struct LottoMachine {
 
     static func match(_ ticketNumbers: [Int], with winningNumbers: [Int]) -> Int {
-        return 3
+        let matchNumbers = ticketNumbers.set.intersection(winningNumbers.set)
+        return matchNumbers.count
     }
 
+}
+
+extension Array where Element == Int {
+    var set: Set<Int> {
+        return Set(self.map { $0})
+    }
 }
